@@ -351,6 +351,9 @@ def check_user_params(params_dict: dict) -> bool:
         and 0 <= params_dict.get("comments_to_views_ratio") <= 1,
         # Paid promotions
         isinstance(params_dict.get("allow_paid_promotions"), bool),
+        # Vid number
+        isinstance(params_dict.get("video_history_limit"), int)
+        and 1 <= params_dict.get("video_history_limit") <= 50,
     ]
 
     ok = all(checks)

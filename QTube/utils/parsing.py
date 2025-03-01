@@ -258,6 +258,15 @@ def parse_arguments() -> dict:
     )
 
     parser.add_argument(
+        "-vhl",
+        "--video_history_limit",
+        metavar="",
+        type=int,
+        default=5,
+        help="How far back videos are checked in creators' upload playlist. Default: 5",
+    )
+
+    parser.add_argument(
         "-rf",
         "--run_frequency",
         metavar="",
@@ -274,17 +283,17 @@ def parse_arguments() -> dict:
     )
 
     parser.add_argument(
-    "-app",
-    "--allow_paid_promotions",
-    action="store_false",
-    help="Allow videos containing paid advertising. Default: True",
+        "-app",
+        "--allow_paid_promotions",
+        action="store_false",
+        help="Allow videos containing paid advertising. Default: True",
     )
 
     parser.add_argument(
-    "-mfk",
-    "--only_made_for_kids",
-    action="store_true",
-    help="Determines whether to only add videos that are made for kids, based on Youtube and FTC guidelines. Default: False",
+        "-mfk",
+        "--only_made_for_kids",
+        action="store_true",
+        help="Determines whether to only add videos that are made for kids, based on Youtube and FTC guidelines. Default: False",
     )
 
     parser.add_argument(

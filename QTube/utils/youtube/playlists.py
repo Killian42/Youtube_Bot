@@ -1,19 +1,20 @@
 import datetime as dt
 
 
-def get_recent_videos(youtube, playlist_ID: str) -> dict:
-    """Retrieves the last 5 videos of a YT playlist.
+def get_recent_videos(youtube, playlist_ID: str, vid_nb: int) -> dict:
+    """Retrieves the last videos added in a YT playlist.
 
     Args:
         youtube (Resource): YT API resource.
         playlist_ID (str): ID of the playlist.
+        vid_nb (int): Number of videos to retrieve.
 
     Returns:
-        recent_vids (dict): Dictionary containing the ID (keys) and upload date (values) of the last 5 videos in the playlist.
+        recent_vids (dict): Dictionary containing the ID (keys) and upload date (values) of the last videos added in the playlist.
     """
     response = (
         youtube.playlistItems()
-        .list(part="contentDetails", playlistId=playlist_ID, maxResults=5)
+        .list(part="contentDetails", playlistId=playlist_ID, maxResults=vid_nb)
         .execute(num_retries=5)
     )
 

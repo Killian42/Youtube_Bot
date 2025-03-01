@@ -97,6 +97,7 @@ For more versatile uses, you can also use command line arguments with the [qtube
 |`comments_threshold`|No|Minimum number of times videos have been commented on.|Positive integer|
 |`likes_to_views_ratio`|No|Minimum likes to views ratio.|Positive float between 0 & 1|
 |`comments_to_views_ratio`|No|Minimum comments to views ratio.|Positive float between 0 & 1|
+|`video_history_limit`|No|How far back videos are checked in creators' upload playlist.|Positive integer between 1 & 50|
 |`run_frequency`|No|Defines the duration, in days, of the timeframe considered by the software. Can be interpreted as the frequency the program should be run.|*daily*, *weekly*, *monthly* or any positive integer|
 |`keep_shorts`|No|Determines whether to add shorts.|boolean|
 |`allow_paid_promotions`|No|Determines whether to add videos containing paid advertisement.|boolean|
@@ -152,6 +153,7 @@ The following *user_params.json* file would add every new videos from channels y
 "comments_threshold": 0,
 "likes_to_views_ratio": 0,
 "comments_to_views_ratio": 0,
+"video_history_limit": 5,
 "run_frequency":"daily",
 "keep_shorts": true,
 "allow_paid_promotions": true,
@@ -196,6 +198,7 @@ The following *user_params.json* file would only add videos with good quality.
 "comments_threshold": 0,
 "likes_to_views_ratio": 0,
 "comments_to_views_ratio": 0,
+"video_history_limit": 5,
 "run_frequency":"daily",
 "keep_shorts": true,
 "allow_paid_promotions": true,
@@ -240,6 +243,7 @@ The following *user_params.json* file would only add the *$1 vs.* MrBeast videos
 "comments_threshold": 0,
 "likes_to_views_ratio": 0,
 "comments_to_views_ratio": 0,
+"video_history_limit": 5,
 "run_frequency":"daily",
 "keep_shorts": false,
 "allow_paid_promotions": true,

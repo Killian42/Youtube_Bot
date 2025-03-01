@@ -83,6 +83,7 @@
     "comments_threshold": 0,
     "likes_to_views_ratio": 0,
     "comments_to_views_ratio": 0,
+    "video_history_limit": 5,
     "run_frequency": "daily",
     "keep_shorts": false,
     "allow_paid_promotions": true,

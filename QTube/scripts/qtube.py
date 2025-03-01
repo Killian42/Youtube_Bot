@@ -308,6 +308,7 @@ def main():
         wanted_channels_upload_playlists.update(partial_dict)
 
     ## Dictionnary of the latest videos from selected channels
+    vid_nb = user_params_dict["video_history_limit"]
     recent_videos = {}
     for ch_name, playlist_Id in wanted_channels_upload_playlists.items():
         latest_partial = QTube.utils.helpers.handle_http_errors(
@@ -316,6 +317,7 @@ def main():
             QTube.utils.youtube.playlists.get_recent_videos,
             youtube,
             playlist_Id,
+            vid_nb,
         )
 
         if latest_partial == "ignore":
